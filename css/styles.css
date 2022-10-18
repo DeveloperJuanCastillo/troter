@@ -11301,10 +11301,6 @@ body {
   overflow-x: hidden;
 }
 
-p {
-  line-height: 1.75;
-}
-
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
@@ -11807,6 +11803,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .footer {
+  padding: 20px;
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11841,10 +11838,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 #text-box{
     text-align: justify;
-}
-
-#text-box p {
-    font-size: 0.8em;
 }
 
 .portrait {
@@ -11941,4 +11934,47 @@ p{
 
 .p-per {
   margin: 1em;
+}
+
+.cards {
+  height: 350px;
+  width: 350px;
+  border-radius: 4px;
+
+  display: grid;
+  place-items: center;
+  grid-template-areas: "main";
+
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cards > * {
+  grid-area: main;
+}
+
+.cards > .image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+
+  transition: transform 400ms, filter 400ms;
+}
+
+.cards:is(:hover, :focus) > .image {
+  transform: scale(1.1);
+  filter: brightness(0.4);
+}
+
+.cards:is(:hover, :focus) > .text {
+  font-size: 1.5em;
+  color: white;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.text {
+  font-size: 0em;
+  text-align: center;
 }
