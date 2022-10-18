@@ -677,6 +677,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
   justify-content: space-around;
+  align-content: center;
 }
 .row > * {
   flex-shrink: 0;
@@ -11319,7 +11320,7 @@ p {
 
 @media (min-width: 768px) {
   section {
-    height: 90vh;
+    height: 91vh;
     justify-content: space-around;
     align-content: space-around;
   }
@@ -11928,8 +11929,16 @@ p{
   text-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
 
-#contenedor-padre {
+.center{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fill {
+  height: 90vh;
+}
+
+.p-per {
+  margin: 1em;
 }
